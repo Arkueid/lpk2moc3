@@ -8,5 +8,5 @@
 * Convert .ogg audios to single-channeled .wav files
 * Recount the values of "CurveCount", "TotalPointCount" and "TotalSegmentCount" in *.motion3.json
 * Link hit areas with motion group names
-
+* Ffmpeg is needed either in the same dir with main.py or in the system PATH
 
