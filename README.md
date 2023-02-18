@@ -1,6 +1,6 @@
 # lpk-to-moc3
 
- GUI for [LPKUnpacker](https://github.com/ihopenot/LpkUnpacker)
+ Based on [LPKUnpacker](https://github.com/ihopenot/LpkUnpacker)
 
 ## Extra functions
 
