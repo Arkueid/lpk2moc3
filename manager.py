@@ -75,7 +75,7 @@ def SetupModel(model_dir: str, modelNameBase: str = None):
                     fileName = os.path.splitext(fileName)[0] + ".wav"
                     targetPath = os.path.join(soundPath, fileName)
                     # ffmpeg *.ogg >>> *.wav 单声道
-                    cmd = "ffmpeg -i \"%s\" -ac 1 \"%s\" -y -v quiet" % (srcPath, targetPath)
+                    cmd = "ffmpeg/bin/ffmpeg.exe -i \"%s\" -ac 1 \"%s\" -y -v quiet" % (srcPath, targetPath)
                     process = subprocess.Popen(
                         cmd, shell=True,
                         stderr=subprocess.PIPE
