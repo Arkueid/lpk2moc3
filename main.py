@@ -180,15 +180,15 @@ class Win(tk.Tk):
                 "lpk文件: %s\n输出路径: %s"
                 % (self.input.get(), self.output.get())
             )
-            try:
-                loader = LpkLoader(self.input.get(), self.config.get())
-                loader.extract(self.output.get())
-                manager.SetupModel(os.path.join(self.outputPath.get(), "character"), self.modelNameVar.get())
-                manager.Log("解压完成！")
-                messagebox.showinfo("LPK模型解压工具", "解压成功!")
-            except Exception as e:
-                messagebox.showerror("LPK模型解压工具", "%s" % str(e))
-                manager.Log("发生错误: %s\n解压停止。" % e)
+            # try:
+            loader = LpkLoader(self.input.get(), self.config.get())
+            loader.extract(self.output.get())
+            manager.SetupModel(os.path.join(self.outputPath.get(), "character"), self.modelNameVar.get())
+            manager.Log("解压完成！")
+            messagebox.showinfo("LPK模型解压工具", "解压成功!")
+        # except Exception as e:
+            messagebox.showerror("LPK模型解压工具", "%s" % str(e))
+            manager.Log("发生错误: %s\n解压停止。" % e)
         else:
             messagebox.showerror(
                 "LPK模型解压工具", "缺少输入或输出路径"

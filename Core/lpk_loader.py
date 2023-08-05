@@ -5,10 +5,8 @@ import json
 
 import manager
 from Core.utils import *
-import logging
 import os
-
-# logger = logging.getLogger("lpkLoder")
+import chardet
 
 
 class LpkLoader():
@@ -64,7 +62,8 @@ class LpkLoader():
 
     def extract_model_json(self, model_json: str, dir):
         subdir = dir
-        entry_s = self.decrypt_file(model_json).decode(encoding="utf8")
+        entry_s = self.decrypt_file(model_json).decode('utf-8')
+        
         entry = json.loads(entry_s)
 
         out_s = json.dumps(entry, ensure_ascii=False)
